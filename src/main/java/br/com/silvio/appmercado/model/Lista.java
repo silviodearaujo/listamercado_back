@@ -18,7 +18,7 @@ import javax.persistence.Table;
 public class Lista {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_lista")
 	private Integer id;
 	
