@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class ItemLista {
 	
 	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	@Column(name = "num_seq")
 	private Integer numSeq;
 	
