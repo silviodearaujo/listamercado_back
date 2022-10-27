@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import br.com.silvio.appmercado.model.Produto;
 import br.com.silvio.appmercado.repo.ProdutoRepo;
+import br.com.silvio.appmercado.repo.ItemListaRepo;
 
 @Component
 public class ProdutoServiceImpl implements IProdutoService{
@@ -20,12 +21,7 @@ public class ProdutoServiceImpl implements IProdutoService{
 		return repo.save(prod);
 	}
 
-	@Override
-	public Produto alterarProduto(Produto prod) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 	@Override
 	public List<Produto> listarTodos() {
 		// TODO Auto-generated method stub
@@ -35,13 +31,13 @@ public class ProdutoServiceImpl implements IProdutoService{
 	@Override
 	public List<Produto> buscarPorPalavraChave(String key) {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.findAllByNomeContaining(key);
 	}
 
 	@Override
 	public Produto buscarPorId(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.findById(id).orElse(null);
 	}
 	
 
