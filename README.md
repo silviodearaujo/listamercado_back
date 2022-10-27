@@ -127,4 +127,8 @@ concluir a lista como sendo completa e gerar seu custo total a partir dos itens 
 Entrada esperada
 
 - Número da lista Saída esperada
+<<<<<<< HEAD
 - Objeto Lista contendo todos os seus atributos e com o valor total correspondente à somatória dos itens
+=======
+- Objeto Lista contendo todos os seus atributos e com o valor total correspondente à somatória dos itens
+>>>>>>> f8b090d73f52763ca3a97f262d0e809bd4ca3948
