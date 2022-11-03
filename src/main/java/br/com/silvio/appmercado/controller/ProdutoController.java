@@ -23,7 +23,7 @@ public class ProdutoController {
 	@PostMapping("/produtos")
 	public ResponseEntity<Produto> cadastrarNovo(@RequestBody Produto novo){
 		Produto prod = service.criarNovoProduto(novo);
-		if(prod != null) {
+		if (prod != null) {
 			return ResponseEntity.status(201).body(prod);
 		}
 		return ResponseEntity.badRequest().build();
@@ -33,6 +33,7 @@ public class ProdutoController {
 	public ResponseEntity<List<Produto>> recuperarPorPalavraChave(@RequestParam(name="k") String keyword){
 		return ResponseEntity.ok(service.buscarPorPalavraChave(keyword));
 	}
+	
 	
 	@GetMapping("/produtos/{id}")
 	public ResponseEntity<Produto> recuperarPorId(@PathVariable Integer id){

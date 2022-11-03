@@ -9,7 +9,7 @@ import br.com.silvio.appmercado.model.Produto;
 import br.com.silvio.appmercado.repo.ProdutoRepo;
 
 @Component
-public class ProdutoServiceImpl  implements IProdutoService{
+public class ProdutoServiceImpl implements IProdutoService{
 	
 	@Autowired
 	private ProdutoRepo repo;
@@ -17,21 +17,15 @@ public class ProdutoServiceImpl  implements IProdutoService{
 	@Override
 	public Produto criarNovoProduto(Produto prod) {
 		// TODO Auto-generated method stub
-		if(prod.getNome() == null || prod.getNome().length() == 0)
+		if (prod.getNome() == null || prod.getNome().length() == 0)
 			return null;
-		return repo.save(prod) ;
-	}
-
-	@Override
-	public Produto alterarProduto(Produto prod) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.save(prod);
 	}
 
 	@Override
 	public List<Produto> listarTodos() {
 		// TODO Auto-generated method stub
-		return null;
+		return (List<Produto>)repo.findAll();
 	}
 
 	@Override
@@ -45,6 +39,5 @@ public class ProdutoServiceImpl  implements IProdutoService{
 		// TODO Auto-generated method stub
 		return repo.findById(id).orElse(null);
 	}
-	
 
 }

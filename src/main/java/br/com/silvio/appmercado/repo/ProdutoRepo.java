@@ -8,5 +8,4 @@ import br.com.silvio.appmercado.model.Produto;
 
 public interface ProdutoRepo extends CrudRepository<Produto, Integer>{
 	public List<Produto> findAllByNomeContaining(String palavraChave);
-	
 }

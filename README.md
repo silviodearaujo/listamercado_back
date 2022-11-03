@@ -1,4 +1,4 @@
-# listamercado_back
+listamercado_back
 Repositório da API da lista de mercado feito com Java / Springboot
 
 # Sistema Lista de Mercado
@@ -128,3 +128,4 @@ Entrada esperada
 
 - Número da lista Saída esperada
 - Objeto Lista contendo todos os seus atributos e com o valor total correspondente à somatória dos itens
+
