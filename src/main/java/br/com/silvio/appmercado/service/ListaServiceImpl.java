@@ -29,7 +29,7 @@ public class ListaServiceImpl implements IListaService {
 
 	@Override
 	public Lista fecharLista(Integer id) {
-		// TODO Auto-generated method stub
+		
 		Lista l = repo.findById(id).get();
 		double total = 0.0;
 		for (ItemLista item: l.getItens()) {
