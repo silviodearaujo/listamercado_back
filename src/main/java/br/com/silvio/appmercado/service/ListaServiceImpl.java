@@ -29,17 +29,16 @@ public class ListaServiceImpl implements IListaService {
 
 	@Override
 	public Lista fecharLista(Integer id) {
-		
+		// TODO Auto-generated method stub
 		Lista l = repo.findById(id).get();
-		double total = 0.0;
+		double total=0.0;
 		for (ItemLista item: l.getItens()) {
 			total += l.getValorTotal();
 		}
 		l.setValorTotal(total);
-		l.setStatus(1);//lista concluida;
+		l.setStatus(1); // lista concluida;
 		return repo.save(l);
 	}
-
 	@Override
 	public Lista buscarPeloId(Integer id) {
 		// TODO Auto-generated method stub
